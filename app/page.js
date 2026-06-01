@@ -368,7 +368,7 @@ function PremiumRocket() {
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_NUMBER = '917300628199'
+const WA_NUMBER = '918076517834'
 const WA_URL = `https://wa.me/${WA_NUMBER}`
 
 const MARQUEE_ITEMS = [
@@ -519,14 +519,14 @@ const PORTFOLIO = [
 ]
 
 const TESTIMONIALS = [
-  { name: 'Arjun Mehta', role: 'Founder, TechScale India', text: 'Growthkaro ne hamare digital presence ko completely transform kar diya. Facebook ads se 340% sales growth in 4 months — beyond expectations!', rating: 5, color: 'linear-gradient(135deg, var(--purple), var(--cyan))' },
+  { name: 'Arjun Mehta', role: 'Founder, TechScale India', text: 'Digital Excellence ne hamare digital presence ko completely transform kar diya. Facebook ads se 340% sales growth in 4 months — beyond expectations!', rating: 5, color: 'linear-gradient(135deg, var(--purple), var(--cyan))' },
   { name: 'Priya Sharma', role: 'CEO, LuxeFashion', text: 'Instagram page 0 se 200K followers in 6 months. Unki content strategy aur reel game ekdum next level hai. Highly recommend!', rating: 5, color: 'linear-gradient(135deg, #e1306c, #f77737)' },
   { name: 'Rahul Gupta', role: 'MD, PropTech India', text: 'Google pe #1 rank ho gaye 5 months mein for competitive keywords. Organic leads ka flood aa gaya. Best investment hamare business mein.', rating: 5, color: 'linear-gradient(135deg, #4285f4, #34a853)' },
-  { name: 'Sneha Agarwal', role: 'Founder, HealthFirst Clinic', text: 'Website se lekar social media tak, sab kuch Growthkaro handle karta hai. Ab main sirf business pe focus kar sakti hun. Freeing!', rating: 5, color: 'linear-gradient(135deg, #10b981, #00d4ff)' },
+  { name: 'Sneha Agarwal', role: 'Founder, HealthFirst Clinic', text: 'Website se lekar social media tak, sab kuch Digital Excellence handle karta hai. Ab main sirf business pe focus kar sakti hun. Freeing!', rating: 5, color: 'linear-gradient(135deg, #10b981, #00d4ff)' },
 ]
 
 const FAQS = [
-  { q: 'Growthkaro ki services shuru karne mein kitna time lagta hai?', a: 'Hum aapke saath discovery call ke baad 48 hours mein kaam shuru kar dete hain. Website ke liye 7-14 din, social media management immediate start ho sakta hai, aur ads 2-3 din mein live ho jaate hain.' },
+  { q: 'Digital Excellence ki services shuru karne mein kitna time lagta hai?', a: 'Hum aapke saath discovery call ke baad 48 hours mein kaam shuru kar dete hain. Website ke liye 7-14 din, social media management immediate start ho sakta hai, aur ads 2-3 din mein live ho jaate hain.' },
   { q: 'Kya main sirf ek service le sakta hoon, poora package nahi?', a: 'Haan, bilkul! Aap sirf Facebook Ads bhi le sakte hain, ya sirf website, ya sirf social media management. Poora bundle lena optional hai — flexibility aapke paas hai.' },
   { q: 'Results kitne time mein dikhte hain?', a: 'Social media growth 4-8 weeks mein, Google SEO 3-6 months mein, paid ads 2-4 weeks mein. Long-term compounding results ke liye hum 3-6 month minimum recommend karte hain.' },
   { q: 'Kya mujhe apni existing website mein changes karne ka access milega?', a: 'Haan, aapko full admin access milega. Aap khud bhi content add kar sakte ho. Hum training bhi dete hain ki website kaise manage karna hai.' },
@@ -542,6 +542,8 @@ function useGSAPAnimations(rocketRuntimeRef) {
     if (typeof window === 'undefined') return
 
     const ctx = gsap.context(() => {
+      const isMobileViewport = window.matchMedia('(max-width: 768px)').matches
+
       // ── HERO ANIMATIONS ──
       gsap.fromTo('.hero-badge',
         { opacity: 0, y: 30, scale: 0.9 },
@@ -641,26 +643,26 @@ function useGSAPAnimations(rocketRuntimeRef) {
           ease: 'none',
         }, 0.08)
         .to('.thrust-nozzle-glow', {
-          opacity: 0.95,
-          scale: 1.1,
+          opacity: 0.92,
+          scale: 1.06,
           duration: 0.1,
           ease: 'none',
         }, 0.1)
         .to('.thrust-flame-outer', {
-          opacity: 0.88,
-          scaleY: 0.82,
+          opacity: 0.72,
+          scaleY: 0.58,
           duration: 0.12,
           ease: 'none',
         }, 0.1)
         .to('.thrust-flame-inner', {
-          opacity: 0.96,
-          scaleY: 0.8,
+          opacity: 0.88,
+          scaleY: 0.68,
           duration: 0.12,
           ease: 'none',
         }, 0.12)
         .to('.thrust-flame-core', {
           opacity: 1,
-          scaleY: 0.78,
+          scaleY: 0.76,
           duration: 0.12,
           ease: 'none',
         }, 0.14)
@@ -673,30 +675,32 @@ function useGSAPAnimations(rocketRuntimeRef) {
 
         // Phase 3 — Liftoff: flame expands, rocket lifts (0.2 → 0.55)
         .to('.rocket-trail-beam', {
-          opacity: 0.64,
-          scaleY: 0.48,
+          opacity: 0.24,
+          scaleY: 0.36,
           duration: 0.15,
           ease: 'none',
         }, 0.2)
         .to('.thrust-flame-outer', {
-          scaleY: 1.34,
-          opacity: 0.96,
+          scaleY: 1.28,
+          scaleX: 1.04,
+          opacity: 0.84,
           duration: 0.3,
           ease: 'none',
         }, 0.2)
         .to('.thrust-flame-inner', {
-          scaleY: 1.28,
+          scaleY: 1.46,
+          scaleX: 1.03,
           duration: 0.3,
           ease: 'none',
         }, 0.2)
         .to('.thrust-flame-core', {
-          scaleY: 1.22,
+          scaleY: 1.62,
           duration: 0.3,
           ease: 'none',
         }, 0.2)
         .to('.thrust-nozzle-glow', {
-          scale: 1.24,
-          opacity: 0.92,
+          scale: 1.18,
+          opacity: 0.96,
           duration: 0.25,
           ease: 'none',
         }, 0.2)
@@ -715,33 +719,35 @@ function useGSAPAnimations(rocketRuntimeRef) {
           ease: 'none',
         }, 0.5)
         .to('.thrust-flame-outer', {
-          scaleY: 1.8,
-          scaleX: 0.92,
-          opacity: 0.96,
+          scaleY: 1.82,
+          scaleX: 1.1,
+          opacity: 0.88,
           duration: 0.5,
           ease: 'none',
         }, 0.5)
         .to('.thrust-flame-inner', {
-          scaleY: 1.7,
-          opacity: 0.98,
+          scaleY: 2.04,
+          scaleX: 1.06,
+          opacity: 0.94,
           duration: 0.5,
           ease: 'none',
         }, 0.5)
         .to('.thrust-flame-core', {
-          scaleY: 1.58,
+          scaleY: 2.2,
+          scaleX: 1.05,
           opacity: 1,
           duration: 0.5,
           ease: 'none',
         }, 0.5)
         .to('.thrust-nozzle-glow', {
-          scale: 1.44,
-          opacity: 0.94,
+          scale: 1.28,
+          opacity: 1,
           duration: 0.4,
           ease: 'none',
         }, 0.5)
         .to('.rocket-trail-beam', {
-          opacity: 0.78,
-          scaleY: 1.08,
+          opacity: 0.42,
+          scaleY: 0.74,
           duration: 0.4,
           ease: 'none',
         }, 0.5)
@@ -754,6 +760,11 @@ function useGSAPAnimations(rocketRuntimeRef) {
 
       // ── SCROLL REVEAL - FADE UP ──
       gsap.utils.toArray('.gsap-fade-up').forEach((el) => {
+        if (isMobileViewport && el.closest('.stats-bar')) {
+          gsap.set(el, { opacity: 1, y: 0, scale: 1, clearProps: 'transform' })
+          return
+        }
+
         gsap.fromTo(el,
           { opacity: 0, y: 60, scale: 0.95 },
           {
@@ -931,6 +942,12 @@ function useGSAPAnimations(rocketRuntimeRef) {
       gsap.utils.toArray('.gsap-counter').forEach((el) => {
         const target = parseInt(el.dataset.target)
         const suffix = el.dataset.suffix || ''
+
+        if (isMobileViewport && el.closest('.stats-bar')) {
+          el.textContent = `${target}${suffix}`
+          return
+        }
+
         const obj = { value: 0 }
 
         gsap.to(obj, {
@@ -978,21 +995,25 @@ function useGSAPAnimations(rocketRuntimeRef) {
       )
 
       // ── STATS BAR ANIMATION ──
-      gsap.fromTo('.stats-bar-inner',
-        { opacity: 0, y: 40, scale: 0.95 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: '.stats-bar-inner',
-            start: 'top 85%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      )
+      if (isMobileViewport) {
+        gsap.set('.stats-bar-inner', { opacity: 1, y: 0, scale: 1, clearProps: 'transform' })
+      } else {
+        gsap.fromTo('.stats-bar-inner',
+          { opacity: 0, y: 40, scale: 0.95 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: '.stats-bar-inner',
+              start: 'top 85%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        )
+      }
 
       // ── SECTION HEADER ANIMATION ──
       gsap.utils.toArray('.section-header').forEach((header) => {
@@ -1434,11 +1455,31 @@ export default function Home() {
   const isDark = theme === 'dark'
 
   return (
-    <div ref={containerRef} style={{ overflowX: 'hidden', width: '100%', position: 'relative' }}>
+    <div ref={containerRef} style={{ width: '100%', position: 'relative' }}>
       {/* ── NAVBAR ── */}
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
         <a href="#" className="nav-brand" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>
-          Growth<span>karo</span>
+          <span className="nav-brand-rocket" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="16" cy="13" rx="5.5" ry="5.5" fill="rgba(255,255,255,0.12)" />
+              <path d="M16 2C16 2 21.5 7 21.5 13.5C21.5 17.5 19 20.5 16 21.5V27.5C16 28.5 15 29.5 14 29.5C13 29.5 12 28.5 12 27.5V21.5C9 20.5 6.5 17.5 6.5 13.5C6.5 7 11 2 11 2H16Z" fill="url(#logoGrad2)" />
+              <path d="M9.5 17L6 23.5L11 20.5L9.5 17Z" fill="url(#logoGrad2)" opacity="0.95" />
+              <path d="M22.5 17L26 23.5L21 20.5L22.5 17Z" fill="url(#logoGrad2)" opacity="0.95" />
+              <path d="M16 22L13.5 27.5H18.5L16 22Z" fill="url(#logoGrad2)" opacity="0.8" />
+              <path d="M14 27.5C14 27.5 14.5 29.5 16 30.3C17.5 29.5 18 27.5 18 27.5H14Z" fill="rgba(255,148,72,1)" />
+              <path d="M14.8 29C14.8 29 15.2 29.8 16 30.2C16.8 29.8 17.2 29 17.2 29H14.8Z" fill="rgba(255,220,130,1)" />
+              <ellipse cx="16" cy="13.5" rx="4.5" ry="5" fill="rgba(255,255,255,0.18)" />
+              <path d="M14 21L16 29.5L18 21" fill="rgba(255,200,80,0.3)" style={{mixBlendMode:'screen'}} />
+              <defs>
+                <linearGradient id="logoGrad2" x1="6.5" y1="2" x2="25.5" y2="30.3" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#a855f7" />
+                  <stop offset="0.45" stopColor="#6c47ff" />
+                  <stop offset="1" stopColor="#00d4ff" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span className="nav-brand-text">Growth<span className="nav-brand-karo">karo</span></span>
         </a>
 
         <div className="nav-links">
@@ -1483,45 +1524,49 @@ export default function Home() {
 
         <div className="container">
           <div className="hero-inner">
-            <div>
-              <div className="hero-badge">
-                <span className="hero-badge-dot"></span>
-                India&apos;s #1 Digital Marketing Agency
-              </div>
+            <div className="hero-copy">
+              <div className="hero-copy-main">
+                <div className="hero-badge">
+                  <span className="hero-badge-dot"></span>
+                  India&apos;s #1 Digital Marketing Agency
+                </div>
 
-              <h1 className="hero-title">
-                Your brand deserves to be{' '}
-                <span className="gradient-text">seen by millions.</span>
-              </h1>
+                <h1 className="hero-title">
+                  Your brand deserves to be{' '}
+                  <span className="gradient-text">seen by millions.</span>
+                </h1>
 
-              <p className="hero-desc">
-                Stop guessing what&apos;s working. We build complete digital marketing systems that bring
-                real customers, generate quality leads, and scale your revenue — month after month.
-              </p>
+                <p className="hero-desc">
+                  Stop guessing what&apos;s working. We build complete digital marketing systems that bring
+                  real customers, generate quality leads, and scale your revenue — month after month.
+                </p>
 
-              <div className="hero-cta">
-                <a href={WA_URL} target="_blank" rel="noopener" className="btn-primary-lg">
-                  Start Growing Today →
-                </a>
-                <a href="#process" className="btn-outline">
-                  See How It Works
-                </a>
-              </div>
-
-              <div className="hero-trust-logos">
-                <span className="trust-label">Trusted by brands across India</span>
-                <div className="trust-logos">
-                  <div className="trust-logo-pill">Startup India</div>
-                  <div className="trust-logo-pill">Google Partner</div>
-                  <div className="trust-logo-pill">Meta Business</div>
-                  <div className="trust-logo-pill">Shopify Expert</div>
+                <div className="hero-cta">
+                  <a href={WA_URL} target="_blank" rel="noopener" className="btn-primary-lg">
+                    Start Growing Today →
+                  </a>
+                  <a href="#process" className="btn-outline">
+                    See How It Works
+                  </a>
                 </div>
               </div>
 
-              <div className="hero-proof">
-                <span className="proof-item">No credit card</span>
-                <span className="proof-item">3x ROI guaranteed</span>
-                <span className="proof-item">Results in 30 days</span>
+              <div className="hero-copy-secondary">
+                <div className="hero-trust-logos">
+                  <span className="trust-label">Trusted by brands across India</span>
+                  <div className="trust-logos">
+                    <div className="trust-logo-pill">Startup India</div>
+                    <div className="trust-logo-pill">Google Partner</div>
+                    <div className="trust-logo-pill">Meta Business</div>
+                    <div className="trust-logo-pill">Shopify Expert</div>
+                  </div>
+                </div>
+
+                <div className="hero-proof">
+                  <span className="proof-item">No credit card</span>
+                  <span className="proof-item">3x ROI guaranteed</span>
+                  <span className="proof-item">Results in 30 days</span>
+                </div>
               </div>
             </div>
 
@@ -1628,7 +1673,7 @@ export default function Home() {
               <span className="gradient-text">One agency.</span>
             </h2>
             <p className="section-sub">
-              From ads to websites to content — Growthkaro is your complete digital marketing partner.
+              From ads to websites to content — Digital Excellence is your complete digital marketing partner.
               No freelancers, no confusion. One team, infinite growth.
             </p>
           </div>
@@ -1761,7 +1806,7 @@ export default function Home() {
 
           <div className="before-after">
             <div className="ba-card ba-card-bad gsap-fade-left">
-              <div className="ba-card-title">😤 Without Growthkaro</div>
+              <div className="ba-card-title">😤 Without Digital Excellence</div>
               {[
                 'Low brand visibility — customers can\'t find you online',
                 'Wasting money on random ads with no strategy',
@@ -1779,7 +1824,7 @@ export default function Home() {
             </div>
 
             <div className="ba-card ba-card-good gsap-fade-right">
-              <div className="ba-card-title">🚀 With Growthkaro</div>
+              <div className="ba-card-title">🚀 With Digital Excellence</div>
               {[
                 'Top Google rankings — customers find you first',
                 'Data-driven ads with 3x+ ROI every month',
@@ -1890,7 +1935,7 @@ export default function Home() {
               <span className="gradient-text">clients say.</span>
             </h2>
             <p className="section-sub">
-              Don&apos;t take our word for it. Here&apos;s what business owners say after working with Growthkaro.
+              Don&apos;t take our word for it. Here&apos;s what business owners say after working with Digital Excellence.
             </p>
           </div>
 
@@ -2028,13 +2073,13 @@ export default function Home() {
               <ul className="footer-links">
                 <li><a href={WA_URL} target="_blank" rel="noopener">WhatsApp us</a></li>
                 <li><a href="mailto:hello@growthkaro.in">hello@growthkaro.in</a></li>
-                <li><a href="tel:+917300628199">+91 73006 28199</a></li>
+                <li><a href="tel:+918076517834">+91 80765 17834</a></li>
               </ul>
             </div>
           </div>
 
           <div className="footer-bottom">
-            <div className="footer-copy">© 2026 Growthkaro. All rights reserved.</div>
+            <div className="footer-copy">© 2026 Digital Excellence. All rights reserved.</div>
             <div className="footer-made">Made in India 🇮🇳 for growing businesses</div>
           </div>
         </div>
