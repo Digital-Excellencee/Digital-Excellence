@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Digital Excellence
 
-## Getting Started
+A modern, motion-rich website for a digital agency, built with **Next.js 16**, **React 19**, **GSAP**, **Framer Motion**, and **Tailwind CSS**.
 
-First, run the development server:
+**Live:** https://digitalexcellence.in
+
+## What this project demonstrates
+
+- Production-ready responsive frontend development
+- Modern landing-page architecture with Next.js App Router
+- Scroll-based interactions and motion using GSAP + ScrollTrigger
+- Component-driven React UI
+- Mobile-first responsive layouts
+- Performance-conscious asset handling and deployment on Vercel
+- Clean visual hierarchy for service businesses and agencies
+
+## Tech stack
+
+- Next.js 16
+- React 19
+- JavaScript
+- Tailwind CSS
+- GSAP / ScrollTrigger
+- Framer Motion
+- Lucide React
+- Vercel
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## About the developer
 
-To learn more about Next.js, take a look at the following resources:
+Built by **Kartavya Agarwal**, a web developer focused on fast, polished, conversion-oriented web experiences using React, Next.js, Shopify and WordPress.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Portfolio: https://kartavyaagarwal.in
+- Email: hello@kartavyaagarwal.in
